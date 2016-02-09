@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <link rel="stylesheet" href="https://rawgit.com/andrewgiessel/leafletstuff/master/leaflet.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://rawgit.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.css">
+   <script src="https://rawgithub.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.js"></script>
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+
+   <link rel="stylesheet" href="https://birdage.github.io/Leaflet.awesome-markers/dist/leaflet.awesome.rotate.css">
+
+   
+   
+   
+   
+
+   <style>
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+      }
+
+   </style>
+</head>
+
+<body>
+
+   <div class="folium-map" id="folium_3736c7590da04416b827f9c766b40708" style="width: 100%; height: 100%"></div>
+
+   <script>
+
+      
+
+      var base_tile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          minZoom: 1,
+          attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+      });
+
+      var baseLayer = {
+        "Base Layer": base_tile
+      };
+
+      /*
+      addition of the wms layers
+      */
+
+      
+
+      /*
+      addition of the tile layers
+      */
+      
+
+      /*
+      list of layers to be added
+      */
+      var layer_list = {
+      
+      };
+
+      /*
+      Bounding box.
+      */
+      var southWest = L.latLng(-90, -180),
+          northEast = L.latLng(90, 180),
+          bounds = L.latLngBounds(southWest, northEast);
+
+      /*
+      Creates the map and adds the selected layers
+      */
+      var map = L.map('folium_3736c7590da04416b827f9c766b40708', {
+                                       center:[40.753889, -73.983611],
+                                       zoom: 11,
+                                       maxBounds: bounds,
+                                       layers: [base_tile]
+                                     });
+
+      L.control.layers(baseLayer, layer_list).addTo(map);
+
+      /*
+      addition of the image layers
+      */
+      
+      
+      //cluster group
+      var clusteredmarkers = L.markerClusterGroup();
+      //section for adding clustered markers
+      
+      //add the clustered markers to the group anyway
+      map.addLayer(clusteredmarkers);
+
+      
+      var marker_1_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_1 = L.marker([40.7099170574, 
+							-74.0073413568],
+							{'icon':marker_1_icon}
+							);
+      
+      map.addLayer(marker_1)
+      
+      var marker_2_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_2 = L.marker([40.7220612, 
+							-73.984848],
+							{'icon':marker_2_icon}
+							);
+      
+      map.addLayer(marker_2)
+      
+      var marker_3_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_3 = L.marker([40.7537689, 
+							-73.9925079],
+							{'icon':marker_3_icon}
+							);
+      
+      map.addLayer(marker_3)
+      
+      var marker_4_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_4 = L.marker([40.7059784, 
+							-74.0119629],
+							{'icon':marker_4_icon}
+							);
+      
+      map.addLayer(marker_4)
+      
+      var marker_5_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_5 = L.marker([40.7405586, 
+							-73.9879913],
+							{'icon':marker_5_icon}
+							);
+      
+      map.addLayer(marker_5)
+      
+      var marker_6_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_6 = L.marker([40.7440376, 
+							-73.9766235],
+							{'icon':marker_6_icon}
+							);
+      
+      map.addLayer(marker_6)
+      
+      var marker_7_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_7 = L.marker([40.7794266, 
+							-73.9558258],
+							{'icon':marker_7_icon}
+							);
+      
+      map.addLayer(marker_7)
+      
+      var marker_8_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_8 = L.marker([40.7142477483, 
+							-73.9883755893],
+							{'icon':marker_8_icon}
+							);
+      
+      map.addLayer(marker_8)
+      
+      var marker_9_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_9 = L.marker([40.746845, 
+							-73.986244],
+							{'icon':marker_9_icon}
+							);
+      
+      map.addLayer(marker_9)
+      
+      var marker_10_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_10 = L.marker([40.712978, 
+							-74.007812],
+							{'icon':marker_10_icon}
+							);
+      
+      map.addLayer(marker_10)
+      
+      var marker_11_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_11 = L.marker([40.7322134, 
+							-73.9814913],
+							{'icon':marker_11_icon}
+							);
+      
+      map.addLayer(marker_11)
+      
+      var marker_12_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_12 = L.marker([40.7375298, 
+							-73.9965134],
+							{'icon':marker_12_icon}
+							);
+      
+      map.addLayer(marker_12)
+      
+      var marker_13_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_13 = L.marker([40.7500305, 
+							-73.971611],
+							{'icon':marker_13_icon}
+							);
+      
+      map.addLayer(marker_13)
+      
+      var marker_14_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_14 = L.marker([40.761425, 
+							-73.984542],
+							{'icon':marker_14_icon}
+							);
+      
+      map.addLayer(marker_14)
+      
+      var marker_15_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_15 = L.marker([40.7943049818, 
+							-73.9722394198],
+							{'icon':marker_15_icon}
+							);
+      
+      map.addLayer(marker_15)
+      
+      var marker_16_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_16 = L.marker([40.8136914, 
+							-73.9561936],
+							{'icon':marker_16_icon}
+							);
+      
+      map.addLayer(marker_16)
+      
+      var marker_17_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_17 = L.marker([40.7954134738, 
+							-73.9488146191],
+							{'icon':marker_17_icon}
+							);
+      
+      map.addLayer(marker_17)
+      
+      var marker_18_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_18 = L.marker([40.8489803, 
+							-73.9337752],
+							{'icon':marker_18_icon}
+							);
+      
+      map.addLayer(marker_18)
+      
+      var marker_19_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_19 = L.marker([40.7497139, 
+							-73.9917221],
+							{'icon':marker_19_icon}
+							);
+      
+      map.addLayer(marker_19)
+      
+      var marker_20_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_20 = L.marker([40.744278, 
+							-73.985855],
+							{'icon':marker_20_icon}
+							);
+      
+      map.addLayer(marker_20)
+      
+      var marker_21_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_21 = L.marker([40.7537689, 
+							-73.9925079],
+							{'icon':marker_21_icon}
+							);
+      
+      map.addLayer(marker_21)
+      
+      var marker_22_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_22 = L.marker([40.71424, 
+							-74.00642],
+							{'icon':marker_22_icon}
+							);
+      
+      map.addLayer(marker_22)
+      
+      var marker_23_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_23 = L.marker([40.7500305, 
+							-73.971611],
+							{'icon':marker_23_icon}
+							);
+      
+      map.addLayer(marker_23)
+      
+      var marker_24_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_24 = L.marker([40.732689, 
+							-73.986519],
+							{'icon':marker_24_icon}
+							);
+      
+      map.addLayer(marker_24)
+      
+      var marker_25_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_25 = L.marker([40.739906, 
+							-73.984909],
+							{'icon':marker_25_icon}
+							);
+      
+      map.addLayer(marker_25)
+      
+      var marker_26_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_26 = L.marker([40.759819, 
+							-73.965248],
+							{'icon':marker_26_icon}
+							);
+      
+      map.addLayer(marker_26)
+      
+      var marker_27_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_27 = L.marker([40.7497139, 
+							-73.9917221],
+							{'icon':marker_27_icon}
+							);
+      
+      map.addLayer(marker_27)
+      
+      var marker_28_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_28 = L.marker([40.7461319, 
+							-73.9937592],
+							{'icon':marker_28_icon}
+							);
+      
+      map.addLayer(marker_28)
+      
+      var marker_29_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_29 = L.marker([40.7110458612, 
+							-74.0066514909],
+							{'icon':marker_29_icon}
+							);
+      
+      map.addLayer(marker_29)
+      
+      var marker_30_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_30 = L.marker([40.8029537648, 
+							-73.9338858426],
+							{'icon':marker_30_icon}
+							);
+      
+      map.addLayer(marker_30)
+      
+      var marker_31_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_31 = L.marker([40.733589828, 
+							-74.0032631904],
+							{'icon':marker_31_icon}
+							);
+      
+      map.addLayer(marker_31)
+      
+      var marker_32_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_32 = L.marker([40.7505455, 
+							-73.9899521],
+							{'icon':marker_32_icon}
+							);
+      
+      map.addLayer(marker_32)
+      
+      var marker_33_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_33 = L.marker([40.854843, 
+							-73.930107],
+							{'icon':marker_33_icon}
+							);
+      
+      map.addLayer(marker_33)
+      
+      var marker_34_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_34 = L.marker([40.7706299, 
+							-73.9573669],
+							{'icon':marker_34_icon}
+							);
+      
+      map.addLayer(marker_34)
+      
+      var marker_35_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_35 = L.marker([40.745651722, 
+							-73.9982970804],
+							{'icon':marker_35_icon}
+							);
+      
+      map.addLayer(marker_35)
+      
+      var marker_36_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_36 = L.marker([40.74839, 
+							-73.973526],
+							{'icon':marker_36_icon}
+							);
+      
+      map.addLayer(marker_36)
+      
+      var marker_37_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_37 = L.marker([40.7527161, 
+							-73.9787369],
+							{'icon':marker_37_icon}
+							);
+      
+      map.addLayer(marker_37)
+      
+      var marker_38_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_38 = L.marker([40.730659, 
+							-73.983444],
+							{'icon':marker_38_icon}
+							);
+      
+      map.addLayer(marker_38)
+      
+      var marker_39_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_39 = L.marker([40.807928592, 
+							-73.945735842],
+							{'icon':marker_39_icon}
+							);
+      
+      map.addLayer(marker_39)
+      
+      var marker_40_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_40 = L.marker([40.7081638277, 
+							-74.0046666563],
+							{'icon':marker_40_icon}
+							);
+      
+      map.addLayer(marker_40)
+      
+      var marker_41_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_41 = L.marker([40.7028625888, 
+							-74.0115666389],
+							{'icon':marker_41_icon}
+							);
+      
+      map.addLayer(marker_41)
+      
+      var marker_42_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_42 = L.marker([40.7301291078, 
+							-73.986492008],
+							{'icon':marker_42_icon}
+							);
+      
+      map.addLayer(marker_42)
+      
+      var marker_43_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_43 = L.marker([40.7576561, 
+							-73.9631882],
+							{'icon':marker_43_icon}
+							);
+      
+      map.addLayer(marker_43)
+      
+      var marker_44_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_44 = L.marker([40.767586, 
+							-73.99015],
+							{'icon':marker_44_icon}
+							);
+      
+      map.addLayer(marker_44)
+      
+      var marker_45_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_45 = L.marker([40.7476654053, 
+							-73.9820022583],
+							{'icon':marker_45_icon}
+							);
+      
+      map.addLayer(marker_45)
+      
+      var marker_46_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_46 = L.marker([40.7832099, 
+							-73.95309],
+							{'icon':marker_46_icon}
+							);
+      
+      map.addLayer(marker_46)
+      
+      var marker_47_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_47 = L.marker([40.8676325, 
+							-73.9209236],
+							{'icon':marker_47_icon}
+							);
+      
+      map.addLayer(marker_47)
+      
+      var marker_48_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_48 = L.marker([40.7391242981, 
+							-74.0002441406],
+							{'icon':marker_48_icon}
+							);
+      
+      map.addLayer(marker_48)
+      
+      var marker_49_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_49 = L.marker([40.714928, 
+							-73.999405],
+							{'icon':marker_49_icon}
+							);
+      
+      map.addLayer(marker_49)
+      
+      var marker_50_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_50 = L.marker([40.7582882792, 
+							-73.9926691353],
+							{'icon':marker_50_icon}
+							);
+      
+      map.addLayer(marker_50)
+      
+      var marker_51_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_51 = L.marker([40.755211, 
+							-73.989563],
+							{'icon':marker_51_icon}
+							);
+      
+      map.addLayer(marker_51)
+      
+      var marker_52_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_52 = L.marker([40.767586, 
+							-73.99015],
+							{'icon':marker_52_icon}
+							);
+      
+      map.addLayer(marker_52)
+      
+      var marker_53_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_53 = L.marker([40.7028625888, 
+							-74.0115666389],
+							{'icon':marker_53_icon}
+							);
+      
+      map.addLayer(marker_53)
+      
+      var marker_54_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_54 = L.marker([40.7813492, 
+							-73.9488373],
+							{'icon':marker_54_icon}
+							);
+      
+      map.addLayer(marker_54)
+      
+      var marker_55_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_55 = L.marker([40.7591286, 
+							-73.9795837],
+							{'icon':marker_55_icon}
+							);
+      
+      map.addLayer(marker_55)
+      
+      var marker_56_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_56 = L.marker([40.70878101, 
+							-74.0097931323],
+							{'icon':marker_56_icon}
+							);
+      
+      map.addLayer(marker_56)
+      
+      var marker_57_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_57 = L.marker([40.7507057, 
+							-73.9767838],
+							{'icon':marker_57_icon}
+							);
+      
+      map.addLayer(marker_57)
+      
+      var marker_58_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_58 = L.marker([40.7214142978, 
+							-74.0044007327],
+							{'icon':marker_58_icon}
+							);
+      
+      map.addLayer(marker_58)
+      
+      var marker_59_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_59 = L.marker([40.7302856, 
+							-73.8637466],
+							{'icon':marker_59_icon}
+							);
+      
+      map.addLayer(marker_59)
+      
+      var marker_60_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_60 = L.marker([40.7066193, 
+							-74.0114517],
+							{'icon':marker_60_icon}
+							);
+      
+      map.addLayer(marker_60)
+      
+      var marker_61_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_61 = L.marker([40.7525215149, 
+							-73.9730987549],
+							{'icon':marker_61_icon}
+							);
+      
+      map.addLayer(marker_61)
+      
+      var marker_62_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_62 = L.marker([40.7773748785, 
+							-73.950426355],
+							{'icon':marker_62_icon}
+							);
+      
+      map.addLayer(marker_62)
+      
+      var marker_63_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_63 = L.marker([40.7263718, 
+							-73.9858475],
+							{'icon':marker_63_icon}
+							);
+      
+      map.addLayer(marker_63)
+      
+      var marker_64_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_64 = L.marker([40.7932892, 
+							-73.9438095],
+							{'icon':marker_64_icon}
+							);
+      
+      map.addLayer(marker_64)
+      
+      var marker_65_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_65 = L.marker([40.792263, 
+							-73.9714661],
+							{'icon':marker_65_icon}
+							);
+      
+      map.addLayer(marker_65)
+      
+      var marker_66_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_66 = L.marker([40.7981606, 
+							-73.9695511],
+							{'icon':marker_66_icon}
+							);
+      
+      map.addLayer(marker_66)
+      
+      var marker_67_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_67 = L.marker([40.7923987174, 
+							-73.9680930653],
+							{'icon':marker_67_icon}
+							);
+      
+      map.addLayer(marker_67)
+      
+      var marker_68_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_68 = L.marker([40.7923987174, 
+							-73.9680930653],
+							{'icon':marker_68_icon}
+							);
+      
+      map.addLayer(marker_68)
+      
+      var marker_69_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_69 = L.marker([40.7923987174, 
+							-73.9680930653],
+							{'icon':marker_69_icon}
+							);
+      
+      map.addLayer(marker_69)
+      
+      var marker_70_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_70 = L.marker([40.745937, 
+							-73.979485],
+							{'icon':marker_70_icon}
+							);
+      
+      map.addLayer(marker_70)
+      
+      var marker_71_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_71 = L.marker([40.7274437, 
+							-74.0056686],
+							{'icon':marker_71_icon}
+							);
+      
+      map.addLayer(marker_71)
+      
+      var marker_72_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_72 = L.marker([40.745651722, 
+							-73.9982970804],
+							{'icon':marker_72_icon}
+							);
+      
+      map.addLayer(marker_72)
+      
+      var marker_73_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_73 = L.marker([40.729683, 
+							-73.979393],
+							{'icon':marker_73_icon}
+							);
+      
+      map.addLayer(marker_73)
+      
+      var marker_74_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_74 = L.marker([40.7734781058, 
+							-73.906767197],
+							{'icon':marker_74_icon}
+							);
+      
+      map.addLayer(marker_74)
+      
+      var marker_75_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_75 = L.marker([40.763947, 
+							-73.771477],
+							{'icon':marker_75_icon}
+							);
+      
+      map.addLayer(marker_75)
+      
+      var marker_76_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_76 = L.marker([40.823566, 
+							-73.944633],
+							{'icon':marker_76_icon}
+							);
+      
+      map.addLayer(marker_76)
+      
+      var marker_77_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_77 = L.marker([40.7515869, 
+							-73.9924164],
+							{'icon':marker_77_icon}
+							);
+      
+      map.addLayer(marker_77)
+      
+      var marker_78_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_78 = L.marker([40.7606419176, 
+							-73.9946667105],
+							{'icon':marker_78_icon}
+							);
+      
+      map.addLayer(marker_78)
+      
+      var marker_79_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_79 = L.marker([40.798641, 
+							-73.940918],
+							{'icon':marker_79_icon}
+							);
+      
+      map.addLayer(marker_79)
+      
+      var marker_80_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_80 = L.marker([40.787448585, 
+							-73.9751241356],
+							{'icon':marker_80_icon}
+							);
+      
+      map.addLayer(marker_80)
+      
+      var marker_81_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_81 = L.marker([40.7476654053, 
+							-73.9820022583],
+							{'icon':marker_81_icon}
+							);
+      
+      map.addLayer(marker_81)
+      
+      var marker_82_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_82 = L.marker([40.7673225, 
+							-73.739006],
+							{'icon':marker_82_icon}
+							);
+      
+      map.addLayer(marker_82)
+      
+      var marker_83_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_83 = L.marker([40.7099092752, 
+							-74.0101142228],
+							{'icon':marker_83_icon}
+							);
+      
+      map.addLayer(marker_83)
+      
+      var marker_84_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_84 = L.marker([40.799976, 
+							-73.96563],
+							{'icon':marker_84_icon}
+							);
+      
+      map.addLayer(marker_84)
+      
+      var marker_85_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_85 = L.marker([40.7669115812, 
+							-73.9828059822],
+							{'icon':marker_85_icon}
+							);
+      
+      map.addLayer(marker_85)
+      
+      var marker_86_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_86 = L.marker([40.7140999, 
+							-74.0087814],
+							{'icon':marker_86_icon}
+							);
+      
+      map.addLayer(marker_86)
+      
+      var marker_87_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_87 = L.marker([40.745651722, 
+							-73.9982970804],
+							{'icon':marker_87_icon}
+							);
+      
+      map.addLayer(marker_87)
+      
+      var marker_88_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_88 = L.marker([40.70878101, 
+							-74.0097931323],
+							{'icon':marker_88_icon}
+							);
+      
+      map.addLayer(marker_88)
+      
+      var marker_89_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_89 = L.marker([40.7362737173, 
+							-73.9890547805],
+							{'icon':marker_89_icon}
+							);
+      
+      map.addLayer(marker_89)
+      
+      var marker_90_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_90 = L.marker([40.7572212, 
+							-73.9691772],
+							{'icon':marker_90_icon}
+							);
+      
+      map.addLayer(marker_90)
+      
+      var marker_91_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_91 = L.marker([40.747768, 
+							-73.976204],
+							{'icon':marker_91_icon}
+							);
+      
+      map.addLayer(marker_91)
+      
+      var marker_92_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_92 = L.marker([40.7537651, 
+							-73.9909515],
+							{'icon':marker_92_icon}
+							);
+      
+      map.addLayer(marker_92)
+      
+      var marker_93_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_93 = L.marker([40.7844215732, 
+							-73.9468059712],
+							{'icon':marker_93_icon}
+							);
+      
+      map.addLayer(marker_93)
+      
+      var marker_94_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_94 = L.marker([40.7613564, 
+							-73.9842606],
+							{'icon':marker_94_icon}
+							);
+      
+      map.addLayer(marker_94)
+      
+      var marker_95_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_95 = L.marker([40.853577, 
+							-73.93438],
+							{'icon':marker_95_icon}
+							);
+      
+      map.addLayer(marker_95)
+      
+      var marker_96_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_96 = L.marker([40.787753821, 
+							-73.9535413881],
+							{'icon':marker_96_icon}
+							);
+      
+      map.addLayer(marker_96)
+      
+      var marker_97_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_97 = L.marker([40.8364754, 
+							-73.9433975],
+							{'icon':marker_97_icon}
+							);
+      
+      map.addLayer(marker_97)
+      
+      var marker_98_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_98 = L.marker([40.82832, 
+							-73.948555],
+							{'icon':marker_98_icon}
+							);
+      
+      map.addLayer(marker_98)
+      
+      var marker_99_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_99 = L.marker([40.7188732177, 
+							-74.0000552684],
+							{'icon':marker_99_icon}
+							);
+      
+      map.addLayer(marker_99)
+      
+      var marker_100_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_100 = L.marker([40.7902184, 
+							-73.9460068],
+							{'icon':marker_100_icon}
+							);
+      
+      map.addLayer(marker_100)
+      
+      var marker_101_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_101 = L.marker([40.7594833374, 
+							-73.9898757935],
+							{'icon':marker_101_icon}
+							);
+      
+      map.addLayer(marker_101)
+      
+      var marker_102_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_102 = L.marker([40.75602, 
+							-73.997749],
+							{'icon':marker_102_icon}
+							);
+      
+      map.addLayer(marker_102)
+      
+      var marker_103_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_103 = L.marker([40.744812, 
+							-73.9827118],
+							{'icon':marker_103_icon}
+							);
+      
+      map.addLayer(marker_103)
+      
+      var marker_104_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_104 = L.marker([40.7903574407, 
+							-73.9747271687],
+							{'icon':marker_104_icon}
+							);
+      
+      map.addLayer(marker_104)
+      
+      var marker_105_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_105 = L.marker([40.7405877113, 
+							-73.98179546],
+							{'icon':marker_105_icon}
+							);
+      
+      map.addLayer(marker_105)
+      
+      var marker_106_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_106 = L.marker([40.7391624451, 
+							-73.9829483032],
+							{'icon':marker_106_icon}
+							);
+      
+      map.addLayer(marker_106)
+      
+      var marker_107_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_107 = L.marker([40.7361183, 
+							-73.9891281],
+							{'icon':marker_107_icon}
+							);
+      
+      map.addLayer(marker_107)
+      
+      var marker_108_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_108 = L.marker([40.7367706299, 
+							-73.984336853],
+							{'icon':marker_108_icon}
+							);
+      
+      map.addLayer(marker_108)
+      
+      var marker_109_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_109 = L.marker([40.7591848075, 
+							-73.9704731852],
+							{'icon':marker_109_icon}
+							);
+      
+      map.addLayer(marker_109)
+      
+      var marker_110_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_110 = L.marker([40.7476712, 
+							-74.0005318],
+							{'icon':marker_110_icon}
+							);
+      
+      map.addLayer(marker_110)
+      
+      var marker_111_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_111 = L.marker([40.8078537, 
+							-73.9526672],
+							{'icon':marker_111_icon}
+							);
+      
+      map.addLayer(marker_111)
+      
+      var marker_112_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_112 = L.marker([40.7295276225, 
+							-73.9983976632],
+							{'icon':marker_112_icon}
+							);
+      
+      map.addLayer(marker_112)
+      
+      var marker_113_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_113 = L.marker([40.743374, 
+							-73.992943],
+							{'icon':marker_113_icon}
+							);
+      
+      map.addLayer(marker_113)
+      
+      var marker_114_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_114 = L.marker([40.7080424051, 
+							-74.0140426799],
+							{'icon':marker_114_icon}
+							);
+      
+      map.addLayer(marker_114)
+      
+      var marker_115_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_115 = L.marker([40.7509765774, 
+							-73.996597901],
+							{'icon':marker_115_icon}
+							);
+      
+      map.addLayer(marker_115)
+      
+      var marker_116_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_116 = L.marker([40.732689, 
+							-73.986519],
+							{'icon':marker_116_icon}
+							);
+      
+      map.addLayer(marker_116)
+      
+      var marker_117_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_117 = L.marker([40.7078238577, 
+							-74.0137110651],
+							{'icon':marker_117_icon}
+							);
+      
+      map.addLayer(marker_117)
+      
+      var marker_118_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_118 = L.marker([40.7339439, 
+							-73.98909],
+							{'icon':marker_118_icon}
+							);
+      
+      map.addLayer(marker_118)
+      
+      var marker_119_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_119 = L.marker([40.716034, 
+							-74.005074],
+							{'icon':marker_119_icon}
+							);
+      
+      map.addLayer(marker_119)
+      
+      var marker_120_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_120 = L.marker([40.7220612, 
+							-73.984848],
+							{'icon':marker_120_icon}
+							);
+      
+      map.addLayer(marker_120)
+      
+      var marker_121_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_121 = L.marker([40.7474098, 
+							-73.884079],
+							{'icon':marker_121_icon}
+							);
+      
+      map.addLayer(marker_121)
+      
+      var marker_122_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_122 = L.marker([40.7659896535, 
+							-73.9554655552],
+							{'icon':marker_122_icon}
+							);
+      
+      map.addLayer(marker_122)
+      
+      var marker_123_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_123 = L.marker([40.596828, 
+							-73.9767],
+							{'icon':marker_123_icon}
+							);
+      
+      map.addLayer(marker_123)
+      
+      var marker_124_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_124 = L.marker([40.6310951888, 
+							-73.918720432],
+							{'icon':marker_124_icon}
+							);
+      
+      map.addLayer(marker_124)
+      
+      var marker_125_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_125 = L.marker([40.6421432495, 
+							-74.0135955811],
+							{'icon':marker_125_icon}
+							);
+      
+      map.addLayer(marker_125)
+      
+      var marker_126_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_126 = L.marker([40.7818049, 
+							-73.838636],
+							{'icon':marker_126_icon}
+							);
+      
+      map.addLayer(marker_126)
+      
+      var marker_127_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_127 = L.marker([40.7185669, 
+							-74.0001907],
+							{'icon':marker_127_icon}
+							);
+      
+      map.addLayer(marker_127)
+      
+      var marker_128_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_128 = L.marker([40.716427, 
+							-73.995461],
+							{'icon':marker_128_icon}
+							);
+      
+      map.addLayer(marker_128)
+      
+      var marker_129_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_129 = L.marker([40.804333, 
+							-73.922318],
+							{'icon':marker_129_icon}
+							);
+      
+      map.addLayer(marker_129)
+      
+      var marker_130_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_130 = L.marker([40.622085, 
+							-74.025321],
+							{'icon':marker_130_icon}
+							);
+      
+      map.addLayer(marker_130)
+      
+      var marker_131_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_131 = L.marker([40.6370531023, 
+							-73.9109804481],
+							{'icon':marker_131_icon}
+							);
+      
+      map.addLayer(marker_131)
+      
+      var marker_132_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_132 = L.marker([40.733692, 
+							-73.999138],
+							{'icon':marker_132_icon}
+							);
+      
+      map.addLayer(marker_132)
+      
+      var marker_133_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_133 = L.marker([40.7424518466, 
+							-73.9805663377],
+							{'icon':marker_133_icon}
+							);
+      
+      map.addLayer(marker_133)
+      
+      var marker_134_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_134 = L.marker([40.7659896535, 
+							-73.9554655552],
+							{'icon':marker_134_icon}
+							);
+      
+      map.addLayer(marker_134)
+      
+      var marker_135_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_135 = L.marker([40.7557525148, 
+							-73.9782597653],
+							{'icon':marker_135_icon}
+							);
+      
+      map.addLayer(marker_135)
+      
+      var marker_136_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_136 = L.marker([40.8983939088, 
+							-73.8544267416],
+							{'icon':marker_136_icon}
+							);
+      
+      map.addLayer(marker_136)
+      
+      var marker_137_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_137 = L.marker([40.8166960627, 
+							-73.8923685998],
+							{'icon':marker_137_icon}
+							);
+      
+      map.addLayer(marker_137)
+      
+      var marker_138_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_138 = L.marker([40.6500549374, 
+							-73.8898801804],
+							{'icon':marker_138_icon}
+							);
+      
+      map.addLayer(marker_138)
+      
+      var marker_139_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_139 = L.marker([40.6389103544, 
+							-73.9990997314],
+							{'icon':marker_139_icon}
+							);
+      
+      map.addLayer(marker_139)
+      
+      var marker_140_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_140 = L.marker([40.6382751465, 
+							-73.9981994629],
+							{'icon':marker_140_icon}
+							);
+      
+      map.addLayer(marker_140)
+      
+      var marker_141_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_141 = L.marker([40.7431984, 
+							-73.8831024],
+							{'icon':marker_141_icon}
+							);
+      
+      map.addLayer(marker_141)
+      
+      var marker_142_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_142 = L.marker([40.7525711, 
+							-73.9869995],
+							{'icon':marker_142_icon}
+							);
+      
+      map.addLayer(marker_142)
+      
+      var marker_143_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_143 = L.marker([40.7348807399, 
+							-73.9521127939],
+							{'icon':marker_143_icon}
+							);
+      
+      map.addLayer(marker_143)
+      
+      var marker_144_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_144 = L.marker([40.7549477, 
+							-73.981926],
+							{'icon':marker_144_icon}
+							);
+      
+      map.addLayer(marker_144)
+      
+      var marker_145_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_145 = L.marker([40.7175153494, 
+							-74.0004240721],
+							{'icon':marker_145_icon}
+							);
+      
+      map.addLayer(marker_145)
+      
+      var marker_146_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_146 = L.marker([40.8327095211, 
+							-73.8278849423],
+							{'icon':marker_146_icon}
+							);
+      
+      map.addLayer(marker_146)
+      
+      var marker_147_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_147 = L.marker([40.76041, 
+							-73.82877],
+							{'icon':marker_147_icon}
+							);
+      
+      map.addLayer(marker_147)
+      
+      var marker_148_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_148 = L.marker([40.8018650405, 
+							-73.9487566922],
+							{'icon':marker_148_icon}
+							);
+      
+      map.addLayer(marker_148)
+      
+      var marker_149_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_149 = L.marker([40.6999664307, 
+							-73.9120101929],
+							{'icon':marker_149_icon}
+							);
+      
+      map.addLayer(marker_149)
+      
+      var marker_150_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_150 = L.marker([40.9067917, 
+							-73.9046021],
+							{'icon':marker_150_icon}
+							);
+      
+      map.addLayer(marker_150)
+      
+      var marker_151_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_151 = L.marker([40.617819652, 
+							-73.9597986639],
+							{'icon':marker_151_icon}
+							);
+      
+      map.addLayer(marker_151)
+      
+      var marker_152_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_152 = L.marker([40.7742368651, 
+							-73.9484810829],
+							{'icon':marker_152_icon}
+							);
+      
+      map.addLayer(marker_152)
+      
+      var marker_153_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_153 = L.marker([40.726152275, 
+							-73.8789810593],
+							{'icon':marker_153_icon}
+							);
+      
+      map.addLayer(marker_153)
+      
+      var marker_154_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_154 = L.marker([40.7553253174, 
+							-73.9948425293],
+							{'icon':marker_154_icon}
+							);
+      
+      map.addLayer(marker_154)
+      
+      var marker_155_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_155 = L.marker([40.6085734069, 
+							-73.9572418481],
+							{'icon':marker_155_icon}
+							);
+      
+      map.addLayer(marker_155)
+      
+      var marker_156_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_156 = L.marker([40.597843, 
+							-73.960762],
+							{'icon':marker_156_icon}
+							);
+      
+      map.addLayer(marker_156)
+      
+      var marker_157_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_157 = L.marker([40.8244409412, 
+							-73.9096842706],
+							{'icon':marker_157_icon}
+							);
+      
+      map.addLayer(marker_157)
+      
+      var marker_158_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_158 = L.marker([40.780529, 
+							-73.952332],
+							{'icon':marker_158_icon}
+							);
+      
+      map.addLayer(marker_158)
+      
+      var marker_159_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_159 = L.marker([40.7983169556, 
+							-73.9527053833],
+							{'icon':marker_159_icon}
+							);
+      
+      map.addLayer(marker_159)
+      
+      var marker_160_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_160 = L.marker([40.7539024353, 
+							-73.9915924072],
+							{'icon':marker_160_icon}
+							);
+      
+      map.addLayer(marker_160)
+      
+      var marker_161_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_161 = L.marker([40.7067576796, 
+							-74.0085927397],
+							{'icon':marker_161_icon}
+							);
+      
+      map.addLayer(marker_161)
+      
+      var marker_162_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_162 = L.marker([40.6881681942, 
+							-73.9802218133],
+							{'icon':marker_162_icon}
+							);
+      
+      map.addLayer(marker_162)
+      
+      var marker_163_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_163 = L.marker([40.8549324, 
+							-73.9298558],
+							{'icon':marker_163_icon}
+							);
+      
+      map.addLayer(marker_163)
+      
+      var marker_164_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_164 = L.marker([40.7563285828, 
+							-73.9297180176],
+							{'icon':marker_164_icon}
+							);
+      
+      map.addLayer(marker_164)
+      
+      var marker_165_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_165 = L.marker([40.8480619031, 
+							-73.9374320582],
+							{'icon':marker_165_icon}
+							);
+      
+      map.addLayer(marker_165)
+      
+      var marker_166_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_166 = L.marker([40.5270459368, 
+							-74.2319319025],
+							{'icon':marker_166_icon}
+							);
+      
+      map.addLayer(marker_166)
+      
+      var marker_167_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_167 = L.marker([40.76041, 
+							-73.82877],
+							{'icon':marker_167_icon}
+							);
+      
+      map.addLayer(marker_167)
+      
+      var marker_168_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_168 = L.marker([40.6804449, 
+							-73.996698],
+							{'icon':marker_168_icon}
+							);
+      
+      map.addLayer(marker_168)
+      
+      var marker_169_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_169 = L.marker([40.737546, 
+							-73.9964921],
+							{'icon':marker_169_icon}
+							);
+      
+      map.addLayer(marker_169)
+      
+      var marker_170_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_170 = L.marker([40.5792007, 
+							-73.9849625],
+							{'icon':marker_170_icon}
+							);
+      
+      map.addLayer(marker_170)
+      
+      var marker_171_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_171 = L.marker([40.7375298, 
+							-73.9965134],
+							{'icon':marker_171_icon}
+							);
+      
+      map.addLayer(marker_171)
+      
+      var marker_172_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_172 = L.marker([40.7591006, 
+							-73.9832564],
+							{'icon':marker_172_icon}
+							);
+      
+      map.addLayer(marker_172)
+      
+      var marker_173_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_173 = L.marker([40.752633, 
+							-73.97349],
+							{'icon':marker_173_icon}
+							);
+      
+      map.addLayer(marker_173)
+      
+      var marker_174_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_174 = L.marker([40.7954134738, 
+							-73.9488146191],
+							{'icon':marker_174_icon}
+							);
+      
+      map.addLayer(marker_174)
+      
+      var marker_175_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_175 = L.marker([40.6456795, 
+							-73.9130402],
+							{'icon':marker_175_icon}
+							);
+      
+      map.addLayer(marker_175)
+      
+      var marker_176_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_176 = L.marker([40.7441672294, 
+							-73.9857684946],
+							{'icon':marker_176_icon}
+							);
+      
+      map.addLayer(marker_176)
+      
+      var marker_177_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_177 = L.marker([40.8424164355, 
+							-73.9386702329],
+							{'icon':marker_177_icon}
+							);
+      
+      map.addLayer(marker_177)
+      
+      var marker_178_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_178 = L.marker([40.862408, 
+							-73.925865],
+							{'icon':marker_178_icon}
+							);
+      
+      map.addLayer(marker_178)
+      
+      var marker_179_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_179 = L.marker([40.787753821, 
+							-73.9535413881],
+							{'icon':marker_179_icon}
+							);
+      
+      map.addLayer(marker_179)
+      
+      var marker_180_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_180 = L.marker([41.0941173211, 
+							-73.9540712255],
+							{'icon':marker_180_icon}
+							);
+      
+      map.addLayer(marker_180)
+      
+      var marker_181_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_181 = L.marker([40.705734, 
+							-74.011864],
+							{'icon':marker_181_icon}
+							);
+      
+      map.addLayer(marker_181)
+      
+      var marker_182_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_182 = L.marker([40.7525215149, 
+							-73.9730987549],
+							{'icon':marker_182_icon}
+							);
+      
+      map.addLayer(marker_182)
+      
+      var marker_183_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_183 = L.marker([40.727279, 
+							-74.005723],
+							{'icon':marker_183_icon}
+							);
+      
+      map.addLayer(marker_183)
+      
+      var marker_184_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_184 = L.marker([40.7367706299, 
+							-73.984336853],
+							{'icon':marker_184_icon}
+							);
+      
+      map.addLayer(marker_184)
+      
+      var marker_185_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_185 = L.marker([40.7292099, 
+							-74.007782],
+							{'icon':marker_185_icon}
+							);
+      
+      map.addLayer(marker_185)
+      
+      var marker_186_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_186 = L.marker([40.7579088494, 
+							-73.9910326758],
+							{'icon':marker_186_icon}
+							);
+      
+      map.addLayer(marker_186)
+      
+      var marker_187_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_187 = L.marker([40.7576561, 
+							-73.9631882],
+							{'icon':marker_187_icon}
+							);
+      
+      map.addLayer(marker_187)
+      
+      var marker_188_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_188 = L.marker([40.7374998, 
+							-73.7418129],
+							{'icon':marker_188_icon}
+							);
+      
+      map.addLayer(marker_188)
+      
+      var marker_189_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_189 = L.marker([40.71278, 
+							-73.98984],
+							{'icon':marker_189_icon}
+							);
+      
+      map.addLayer(marker_189)
+      
+      var marker_190_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_190 = L.marker([40.7497177, 
+							-73.9917374],
+							{'icon':marker_190_icon}
+							);
+      
+      map.addLayer(marker_190)
+      
+      var marker_191_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_191 = L.marker([40.7440122217, 
+							-73.9765101671],
+							{'icon':marker_191_icon}
+							);
+      
+      map.addLayer(marker_191)
+      
+      var marker_192_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_192 = L.marker([40.760539, 
+							-73.961709],
+							{'icon':marker_192_icon}
+							);
+      
+      map.addLayer(marker_192)
+      
+      var marker_193_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_193 = L.marker([40.839531, 
+							-73.937569],
+							{'icon':marker_193_icon}
+							);
+      
+      map.addLayer(marker_193)
+      
+      var marker_194_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_194 = L.marker([40.7078238577, 
+							-74.0137110651],
+							{'icon':marker_194_icon}
+							);
+      
+      map.addLayer(marker_194)
+      
+      var marker_195_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_195 = L.marker([40.7166646, 
+							-73.9895452],
+							{'icon':marker_195_icon}
+							);
+      
+      map.addLayer(marker_195)
+      
+      var marker_196_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_196 = L.marker([40.707304, 
+							-73.80218],
+							{'icon':marker_196_icon}
+							);
+      
+      map.addLayer(marker_196)
+      
+      var marker_197_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_197 = L.marker([40.8244409412, 
+							-73.9096842706],
+							{'icon':marker_197_icon}
+							);
+      
+      map.addLayer(marker_197)
+      
+      var marker_198_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_198 = L.marker([40.718475, 
+							-73.986656],
+							{'icon':marker_198_icon}
+							);
+      
+      map.addLayer(marker_198)
+      
+      var marker_199_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_199 = L.marker([40.8227858464, 
+							-73.9415948352],
+							{'icon':marker_199_icon}
+							);
+      
+      map.addLayer(marker_199)
+      
+      var marker_200_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_200 = L.marker([40.8460878669, 
+							-73.8316763395],
+							{'icon':marker_200_icon}
+							);
+      
+      map.addLayer(marker_200)
+      
+      var marker_201_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_201 = L.marker([40.7051048, 
+							-74.0117188],
+							{'icon':marker_201_icon}
+							);
+      
+      map.addLayer(marker_201)
+      
+      var marker_202_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_202 = L.marker([40.7360783524, 
+							-73.747142649],
+							{'icon':marker_202_icon}
+							);
+      
+      map.addLayer(marker_202)
+      
+      var marker_203_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_203 = L.marker([40.7593353, 
+							-73.831212],
+							{'icon':marker_203_icon}
+							);
+      
+      map.addLayer(marker_203)
+      
+      var marker_204_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_204 = L.marker([40.8274544785, 
+							-73.9256611839],
+							{'icon':marker_204_icon}
+							);
+      
+      map.addLayer(marker_204)
+      
+      var marker_205_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_205 = L.marker([40.6570027024, 
+							-73.7682279199],
+							{'icon':marker_205_icon}
+							);
+      
+      map.addLayer(marker_205)
+      
+      var marker_206_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_206 = L.marker([40.7127457, 
+							-73.7839203],
+							{'icon':marker_206_icon}
+							);
+      
+      map.addLayer(marker_206)
+      
+      var marker_207_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_207 = L.marker([40.7182157324, 
+							-73.8169968269],
+							{'icon':marker_207_icon}
+							);
+      
+      map.addLayer(marker_207)
+      
+      var marker_208_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_208 = L.marker([40.817199, 
+							-73.9222388],
+							{'icon':marker_208_icon}
+							);
+      
+      map.addLayer(marker_208)
+      
+      var marker_209_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_209 = L.marker([40.8239326, 
+							-73.873764],
+							{'icon':marker_209_icon}
+							);
+      
+      map.addLayer(marker_209)
+      
+      var marker_210_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_210 = L.marker([40.7552719, 
+							-73.8159027],
+							{'icon':marker_210_icon}
+							);
+      
+      map.addLayer(marker_210)
+      
+      var marker_211_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_211 = L.marker([40.885695219, 
+							-73.9104352891],
+							{'icon':marker_211_icon}
+							);
+      
+      map.addLayer(marker_211)
+      
+      var marker_212_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_212 = L.marker([40.763589, 
+							-73.981957],
+							{'icon':marker_212_icon}
+							);
+      
+      map.addLayer(marker_212)
+      
+      var marker_213_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_213 = L.marker([40.7516086451, 
+							-73.9861207627],
+							{'icon':marker_213_icon}
+							);
+      
+      map.addLayer(marker_213)
+      
+      var marker_214_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_214 = L.marker([40.8510769, 
+							-73.930883],
+							{'icon':marker_214_icon}
+							);
+      
+      map.addLayer(marker_214)
+      
+      var marker_215_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_215 = L.marker([40.6436283, 
+							-73.7820959],
+							{'icon':marker_215_icon}
+							);
+      
+      map.addLayer(marker_215)
+      
+      var marker_216_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_216 = L.marker([40.7846096811, 
+							-73.9494571328],
+							{'icon':marker_216_icon}
+							);
+      
+      map.addLayer(marker_216)
+      
+      var marker_217_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_217 = L.marker([40.807928592, 
+							-73.945735842],
+							{'icon':marker_217_icon}
+							);
+      
+      map.addLayer(marker_217)
+      
+      var marker_218_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_218 = L.marker([40.759819, 
+							-73.965248],
+							{'icon':marker_218_icon}
+							);
+      
+      map.addLayer(marker_218)
+      
+      var marker_219_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_219 = L.marker([40.747962328, 
+							-73.9858295023],
+							{'icon':marker_219_icon}
+							);
+      
+      map.addLayer(marker_219)
+      
+      var marker_220_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_220 = L.marker([40.80299, 
+							-73.956818],
+							{'icon':marker_220_icon}
+							);
+      
+      map.addLayer(marker_220)
+      
+      var marker_221_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_221 = L.marker([40.7537689, 
+							-73.9925079],
+							{'icon':marker_221_icon}
+							);
+      
+      map.addLayer(marker_221)
+      
+      var marker_222_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_222 = L.marker([40.7263718, 
+							-73.9858475],
+							{'icon':marker_222_icon}
+							);
+      
+      map.addLayer(marker_222)
+      
+      var marker_223_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_223 = L.marker([40.7483826, 
+							-73.9906845],
+							{'icon':marker_223_icon}
+							);
+      
+      map.addLayer(marker_223)
+      
+      var marker_224_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_224 = L.marker([40.755693, 
+							-73.816005],
+							{'icon':marker_224_icon}
+							);
+      
+      map.addLayer(marker_224)
+      
+      var marker_225_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_225 = L.marker([40.8109207, 
+							-73.9521866],
+							{'icon':marker_225_icon}
+							);
+      
+      map.addLayer(marker_225)
+      
+      var marker_226_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_226 = L.marker([40.799976, 
+							-73.96563],
+							{'icon':marker_226_icon}
+							);
+      
+      map.addLayer(marker_226)
+      
+      var marker_227_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_227 = L.marker([40.7037429, 
+							-74.0118845],
+							{'icon':marker_227_icon}
+							);
+      
+      map.addLayer(marker_227)
+      
+      var marker_228_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_228 = L.marker([40.7089185, 
+							-74.0093025],
+							{'icon':marker_228_icon}
+							);
+      
+      map.addLayer(marker_228)
+      
+      var marker_229_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_229 = L.marker([40.7642288, 
+							-73.9589462],
+							{'icon':marker_229_icon}
+							);
+      
+      map.addLayer(marker_229)
+      
+      var marker_230_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_230 = L.marker([40.7642288, 
+							-73.9589462],
+							{'icon':marker_230_icon}
+							);
+      
+      map.addLayer(marker_230)
+      
+      var marker_231_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_231 = L.marker([40.7286263, 
+							-73.9903717],
+							{'icon':marker_231_icon}
+							);
+      
+      map.addLayer(marker_231)
+      
+      var marker_232_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_232 = L.marker([40.77854784, 
+							-73.9563868165],
+							{'icon':marker_232_icon}
+							);
+      
+      map.addLayer(marker_232)
+      
+      var marker_233_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_233 = L.marker([40.7523626089, 
+							-73.984246999],
+							{'icon':marker_233_icon}
+							);
+      
+      map.addLayer(marker_233)
+      
+      var marker_234_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_234 = L.marker([40.7923987174, 
+							-73.9680930653],
+							{'icon':marker_234_icon}
+							);
+      
+      map.addLayer(marker_234)
+      
+      var marker_235_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_235 = L.marker([40.71278, 
+							-73.98984],
+							{'icon':marker_235_icon}
+							);
+      
+      map.addLayer(marker_235)
+      
+      var marker_236_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_236 = L.marker([40.7576497083, 
+							-73.9632002341],
+							{'icon':marker_236_icon}
+							);
+      
+      map.addLayer(marker_236)
+      
+      var marker_237_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_237 = L.marker([40.7613564, 
+							-73.9842606],
+							{'icon':marker_237_icon}
+							);
+      
+      map.addLayer(marker_237)
+      
+      var marker_238_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_238 = L.marker([42.4128987464, 
+							-79.451404248],
+							{'icon':marker_238_icon}
+							);
+      
+      map.addLayer(marker_238)
+      
+      var marker_239_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_239 = L.marker([40.7664640829, 
+							-73.9653149146],
+							{'icon':marker_239_icon}
+							);
+      
+      map.addLayer(marker_239)
+      
+      var marker_240_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_240 = L.marker([40.787753821, 
+							-73.9535413881],
+							{'icon':marker_240_icon}
+							);
+      
+      map.addLayer(marker_240)
+      
+      var marker_241_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_241 = L.marker([40.7582893, 
+							-73.9704208],
+							{'icon':marker_241_icon}
+							);
+      
+      map.addLayer(marker_241)
+      
+      var marker_242_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_242 = L.marker([40.753727, 
+							-73.9741592],
+							{'icon':marker_242_icon}
+							);
+      
+      map.addLayer(marker_242)
+      
+      var marker_243_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_243 = L.marker([40.7501526, 
+							-73.9813995],
+							{'icon':marker_243_icon}
+							);
+      
+      map.addLayer(marker_243)
+      
+      var marker_244_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_244 = L.marker([40.7603683, 
+							-73.9766998],
+							{'icon':marker_244_icon}
+							);
+      
+      map.addLayer(marker_244)
+      
+      var marker_245_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_245 = L.marker([40.7367706299, 
+							-73.984336853],
+							{'icon':marker_245_icon}
+							);
+      
+      map.addLayer(marker_245)
+      
+      var marker_246_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_246 = L.marker([40.7519417, 
+							-73.9877167],
+							{'icon':marker_246_icon}
+							);
+      
+      map.addLayer(marker_246)
+      
+      var marker_247_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_247 = L.marker([40.7293995, 
+							-73.9783282],
+							{'icon':marker_247_icon}
+							);
+      
+      map.addLayer(marker_247)
+      
+      var marker_248_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_248 = L.marker([40.7485427856, 
+							-73.9736480713],
+							{'icon':marker_248_icon}
+							);
+      
+      map.addLayer(marker_248)
+      
+      var marker_249_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_249 = L.marker([40.676095564, 
+							-74.0006701756],
+							{'icon':marker_249_icon}
+							);
+      
+      map.addLayer(marker_249)
+      
+      var marker_250_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_250 = L.marker([40.7617313253, 
+							-73.9898759499],
+							{'icon':marker_250_icon}
+							);
+      
+      map.addLayer(marker_250)
+      
+      var marker_251_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_251 = L.marker([40.823566, 
+							-73.944633],
+							{'icon':marker_251_icon}
+							);
+      
+      map.addLayer(marker_251)
+      
+      var marker_252_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_252 = L.marker([40.708732, 
+							-74.005348],
+							{'icon':marker_252_icon}
+							);
+      
+      map.addLayer(marker_252)
+      
+      var marker_253_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_253 = L.marker([40.7476712, 
+							-74.0005318],
+							{'icon':marker_253_icon}
+							);
+      
+      map.addLayer(marker_253)
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+
+   </script>
+
+</body>
